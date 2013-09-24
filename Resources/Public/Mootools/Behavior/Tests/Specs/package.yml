@@ -1,0 +1,20 @@
+name: "Behavior-Tests"
+
+web: "[clientcide.com](http://clientcide.com)"
+
+description: "Behavior filters for MooTools More"
+
+license: "MIT License"
+
+copyright: "&copy; [Aaron Newton](http://clientcide.com)"
+
+authors: "[Aaron Newton](http://clientcide.com)"
+
+sources:
+  - "Behavior/BehaviorAPI.Specs.js"
+  - "Behavior/Behavior.Benchmarks.js"
+  - "Behavior/Behavior.Specs.js"
+  - "Behavior/Behavior.SpecsHelpers.js"
+  - "Behavior/Delegator.Specs.js"
+  - "Behavior/Element.Data.Specs.js"
+  - "Behavior/Behavior.Startup.Specs.js"

@@ -1,0 +1,8 @@
+MooTools:
+  Packager:
+    PageBuild:
+      jsFileName: 'MooTools.Essentials_{shortHash}.js'
+      paths:
+        Core: resource://MooTools.Essentials/Public/Mootools/Core
+        More: resource://MooTools.Essentials/Public/Mootools/More
+        Behavior: resource://MooTools.Essentials/Public/Mootools/Behavior

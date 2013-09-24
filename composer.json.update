@@ -1,0 +1,55 @@
+{
+	"name": "mootools/essentials",
+	"type": "typo3-flow-package",
+	"description": "MooTools Core, MooTools More, MooTools Behavior"
+
+	"_comment" : "use this file only if you wish to update the subpackges, these are statically added as composer does not support subpackges",
+
+	"config": {
+		"vendor-dir": "Resources/Public"
+	},
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "Mootools/Core",
+				"version": "master",
+				"source": {
+					"url": "https://github.com/mootools/mootools-core.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "Mootools/More",
+				"version": "master",
+				"source": {
+					"url": "https://github.com/mootools/mootools-more.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "Mootools/Behavior",
+				"version": "master",
+				"source": {
+					"url": "https://github.com/anutron/behavior.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		}
+	],
+	"require": {
+		"Mootools/Core": "*",
+		"Mootools/More": "*",
+		"Mootools/Behavior": "*"
+	},
+	"minimum-stability": "dev"
+}
