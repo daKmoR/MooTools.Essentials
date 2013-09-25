@@ -1,5 +1,8 @@
 {
 	"name": "mootools/essentials",
 	"type": "typo3-flow-package",
-	"description": "MooTools Core, MooTools More, MooTools Behavior"
+	"description": "MooTools Core, MooTools More, MooTools Behavior",
+	"require": {
+		"mootools/packager": "dev-master"
+	}
 }
