@@ -4,5 +4,10 @@
 	"description": "MooTools Core, MooTools More, MooTools Behavior",
 	"require": {
 		"mootools/packager": "dev-master"
+	},
+	"autoload": {
+		"psr-0": {
+			"MooTools\\Essentials": "Classes"
+		}
 	}
 }
