@@ -16,13 +16,13 @@ use TYPO3\Flow\Annotations as Flow;
 /**
  * A ViewHelper which registers its requirements in order to build the appropriate JavaScript
  */
-class IfLoadedViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractConditionViewHelper {
+class IfRequiredViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractConditionViewHelper {
 
 	/**
 	 * @Flow\Inject
 	 * @var \MooTools\Essentials\Service\BuildService
 	 */
-	protected $pageBuildService;
+	protected $buildService;
 
 	/**
 	 * @param array $condition A JSON string what modules to require
@@ -30,7 +30,6 @@ class IfLoadedViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractConditionV
 	 */
 	public function render($condition = array()) {
 
-		var_dump($this->pageBuildService->getToBuildComponents());
 		var_dump($condition);
 		if ($condition) {
 			return $this->renderThenChild();

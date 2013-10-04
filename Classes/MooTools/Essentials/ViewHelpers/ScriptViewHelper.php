@@ -37,13 +37,11 @@ class ScriptViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractTagBasedView
 	}
 
 	/**
-	 * @param array $require A JSON string what modules to require
+	 * @param mixed $requires A JSON string what modules to require
 	 * @return string
 	 */
-	public function render($require = array()) {
-//		foreach ($require as $requiredComponent) {
-//			$this->buildService->getPackager()->$requiredComponent);
-//		}
+	public function render($require) {
+		$this->buildService->addRequire($require);
 
 		$this->tag->setContent($this->renderChildren());
 		$this->tag->forceClosingTag(TRUE);

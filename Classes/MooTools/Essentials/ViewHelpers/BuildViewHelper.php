@@ -26,20 +26,13 @@ class BuildViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper {
 	 * @Flow\Inject
 	 * @var \MooTools\Essentials\Service\BuildService
 	 */
-	protected $pageBuildService;
+	protected $buildService;
 
 	/**
-	 * @param string $jsFileName
-	 * @throws \TYPO3\Fluid\Core\ViewHelper\Exception\InvalidVariableException
 	 * @return string
 	 */
-	public function render($jsFileName = NULL) {
-//		if ($jsFileName === NULL && $this->pageBuildConfiguration->getJsFileName() === NULL) {
-//			throw new \TYPO3\Fluid\Core\ViewHelper\Exception\InvalidVariableException('The page build configuration for the MooTools packager does not contain a JavaScript file name, so does not the ViewHelper. However, such a file name is necessary.', 1366642448);
-//		} elseif ($jsFileName !== NULL) {
-//			$this->pageBuildConfiguration->setJsFileName($jsFileName);
-//		}
-//		return $this->pageBuildService->getSubstitutionString();
+	public function render() {
+		return $this->buildService->build();
 	}
 
 }
