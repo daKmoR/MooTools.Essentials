@@ -97,6 +97,22 @@ class BuildService {
 	}
 
 	/**
+	 * @param mixed $require the stuff to require array or string
+	 * @return bool
+	 */
+	public function isRequired($require) {
+		if (is_string($require)) {
+			$require = array($require);
+		}
+		foreach($require as $requirement) {
+			if (!in_array($requirement, $this->getFullRequirement())) {
+				return FALSE;
+			}
+		}
+		return TRUE;
+	}
+
+	/**
 	 * @param array $fullRequirement
 	 */
 	public function setFullRequirement($fullRequirement) {

@@ -1,5 +1,5 @@
 <?php
-namespace MooTools\Essentials\ViewHelpers;
+namespace MooTools\Essentials\ViewHelpers\Widget;
 
 /*                                                                        *
  * This script belongs to the TYPO3 Flow package "MooTools.Essentials".     *
@@ -12,28 +12,19 @@ namespace MooTools\Essentials\ViewHelpers;
  *                                                                        */
 
 use TYPO3\Flow\Annotations as Flow;
+use TYPO3\Fluid\Core\Widget\AbstractWidgetViewHelper;
 
 /**
- * A ViewHelper which registers its requirements in order to build the appropriate JavaScript
+ * This Widget does stuff :p
+ *
  */
-class IfRequiredViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractConditionViewHelper {
+class BehaviorViewHelper extends AbstractWidgetViewHelper {
 
 	/**
-	 * @Flow\Inject
-	 * @var \MooTools\Essentials\Service\BuildService
-	 */
-	protected $buildService;
-
-	/**
-	 * @param mixed $condition A JSON string what modules to require
 	 * @return string
 	 */
-	public function render($condition) {
-		if ($this->buildService->isRequired($condition)) {
-			return $this->renderThenChild();
-		} else {
-			return $this->renderElseChild();
-		}
+	public function render() {
+		// everything is in the Fluid Template
 	}
 
 }

@@ -3,7 +3,7 @@
 	"type": "typo3-flow-package",
 	"description": "MooTools Core, MooTools More, MooTools Behavior",
 	"require": {
-		"mootools/packager": "dev-master"
+		"typo3/flow": "dev-master"
 	},
 	"autoload": {
 		"psr-0": {
